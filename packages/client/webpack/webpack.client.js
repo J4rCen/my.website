@@ -37,7 +37,7 @@ module.exports = (env, argv) => {
             compress: true,
             port: 9000,
             hot: true
-          },
+        },
         resolve: config.resolve,
         module: {
             rules: [
@@ -59,6 +59,7 @@ module.exports = (env, argv) => {
         output: {
             filename: watchMode ? 'assets/[name].[hash].js' : 'assets/[name].[chunkhash].js', // небольшое условие, т.к. WDS не будет работать с chunkhash
             path: path.resolve(__dirname, '../dist'), // Весь наш результат складываем в папку dist
+            assetModuleFilename: 'public/[hash][ext]',
             publicPath: '/',
         },
         performance: {

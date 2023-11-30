@@ -1,5 +1,4 @@
 const path = require("path")
-const { experiments } = require("webpack")
 
 module.exports = (env) => {
 
@@ -21,7 +20,10 @@ module.exports = (env) => {
         
         file: {
             test: /\.(png)$/i,
-            use: ["file-loader"]
+            loader: "file-loader",
+            options: {
+                name: "public/[hash].[ext]"
+            }
         }
     }
 
@@ -30,6 +32,7 @@ module.exports = (env) => {
         alias: { 
             App: path.resolve(__dirname, '../src/App/'),
             Pages: path.resolve(__dirname, '../src/Pages/'),
+            Components: path.resolve(__dirname, '../src/Components/'),
         },
     }
 
