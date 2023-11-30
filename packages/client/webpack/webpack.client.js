@@ -43,6 +43,7 @@ module.exports = (env, argv) => {
             rules: [
                 config.modules.js,
                 config.modules.scss,
+                config.modules.file,
             ],
         },
         plugins: [

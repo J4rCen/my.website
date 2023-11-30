@@ -1,7 +1,11 @@
 import React, { ReactNode } from "react";
 import "./NavMenu.scss"
 
-const NavMenu = () => {
+interface NavMenuProps {
+    isMobile: boolean
+}
+
+const NavMenu = (props: NavMenuProps) => {
     const menu = {
         home: "Главная",
         aboutMe: "Обо мне",
@@ -11,14 +15,24 @@ const NavMenu = () => {
         contacts: "Контакты"
     }
 
-    const menuList: Array<Element | React.JSX.Element> = []
+    let menuList: Array<Element | React.JSX.Element> = []
 
-    Object.entries(menu).forEach((el, index) => menuList.push(<li id={el[0]} className="navmenuList" key={index}>{el[1]}</li>))
+    Object.entries(menu).forEach((el, index) => menuList.push(<li className="navmenuList" key={index}><a className="color_white" href={`#${el[0]}`}  key={index}>{el[1]}</a></li>))
+
+    function show() {
+        const listSpan = document.querySelector(".listSpan");
+        listSpan.classList.toggle("hide");
+        listSpan.classList.toggle("flex");
+    }
 
     return(
-        <ul className="navmenu">
-            {menuList as ReactNode}
-        </ul>
+        <nav className="navmenu bg_color_black">
+            <ul className="navmenuUl color_white">
+                {props.isMobile ? <span className="listSpan hide">{ menuList as ReactNode }</span> : menuList as ReactNode }
+                {props.isMobile ? <li onClick={show} className="navmenuList">Меню</li> : ""}
+            </ul>  
+        </nav>
+        
     )
 }
 

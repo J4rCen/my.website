@@ -5,7 +5,9 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:client": "lerna run dev  --scope=client"
+    "dev:client": "lerna run dev  --scope=client",
+    "watch:client": "lerna run watch --scope=client"
+    
   },
   "keywords": [],
   "author": "",

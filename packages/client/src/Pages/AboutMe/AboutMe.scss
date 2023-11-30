@@ -1,0 +1,26 @@
+.AboutMe_main_div {
+    display: inline-block;
+}
+
+.AboutMe_inform {
+    display: grid;
+    justify-items: center;
+    margin: 10px;
+    gap: 20px;
+}
+
+.AboutMe_inform_figure {
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+    background-color: silver;
+}
+
+.AboutMe_inform_div {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.bold {
+    font-weight: bold;
+}

@@ -13,6 +13,7 @@
         "paths": { 
             "App": ["src/App"],
             "Pages/*": ["src/Pages/*"],
+            "public/*": ["./public"]
         }
     },
     "exclude": [
