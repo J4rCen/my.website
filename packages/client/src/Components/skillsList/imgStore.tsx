@@ -28,18 +28,18 @@ const size = {
 }
 
 const skillsImage: any = {
-    HTML: photoProcessor(html, size.h, size.w, "html"),
-    Css: photoProcessor(css, size.h, size.w, "css"),
-    Scss: photoProcessor(scss, size.h, size.w, "scss"),
-    js: photoProcessor(js, size.h, size.w, "js"),
-    ts: photoProcessor(ts, size.h, size.w, "ts"),
-    react: photoProcessor(react, size.h, size.w, "react"),
-    node: photoProcessor(node, size.h, size.w, "node"),
-    vite: photoProcessor(vite, size.h, size.w, "vite"),
-    webpack: photoProcessor(webpack, size.h, size.w, "webpack"),
-    chai: photoProcessor(chai, size.h, size.w, "chai"),
-    mocha: photoProcessor(mocha, size.h, size.w, "mocha"),
-    github: photoProcessor(github, size.h, size.w, "github"),
+    HTML: photoProcessor(html, size.h, size.w, "Html"),
+    Css: photoProcessor(css, size.h, size.w, "Css"),
+    Scss: photoProcessor(scss, size.h, size.w, "Scss"),
+    Js: photoProcessor(js, size.h, size.w, "Js"),
+    Ts: photoProcessor(ts, size.h, size.w, "Ts"),
+    React: photoProcessor(react, size.h, size.w, "React"),
+    NodeJs: photoProcessor(node, size.h, size.w, "NodeJs"),
+    Vite: photoProcessor(vite, size.h, size.w, "Vite"),
+    Webpack: photoProcessor(webpack, size.h, size.w, "Webpack"),
+    Chai: photoProcessor(chai, size.h, size.w, "Chai"),
+    Mocha: photoProcessor(mocha, size.h, size.w, "Mocha"),
+    Github: photoProcessor(github, size.h, size.w, "Github"),
 }
 
 

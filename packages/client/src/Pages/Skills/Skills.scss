@@ -1,5 +1,10 @@
+.skillsList_div {
+    align-items: center;
+    flex-direction:  column;
+}
+
 .skillsList {
-    display: flex;
     flex-direction: column;
     margin: 10px;
+    width: 80%;
 }

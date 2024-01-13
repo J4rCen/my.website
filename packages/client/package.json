@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack --config ./webpack/webpack.client.js --mode development",
+    "build": "webpack --config ./webpack/webpack.client.js --mode production",
     "watch": "webpack-dev-server --config ./webpack/webpack.client.js --mode development"
   },
   "license": "ISC",

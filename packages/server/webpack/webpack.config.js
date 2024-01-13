@@ -1,6 +1,7 @@
 const path = require("path")
 
 module.exports = (env) => {
+
     const modules = {
         js: {
             test: /\.ts(x?)$/,
@@ -11,36 +12,27 @@ module.exports = (env) => {
                 },
             ],
         },
-        stylus: {
-            test: /\.styl$/,
-            use: [
-                {
-                    loader: "style-loader",
-                },
-                {
-                    loader: "css-loader",
-                },
-                {
-                    loader: "stylus-loader",
-                    options: {
-                        import: [ // Тут для Stylus'а можем объявить глобальные переменные или функции, чтобы каждый раз их не импортировать
-                            path.resolve(__dirname, '../variables.styl'),
-                        ],
-                    }
-                },
-            ],
-        },
-    }
 
-    if (env === 'production') {
-        modules.stylus.use.splice(2, 0, { loader: "postcss-loader" })
+        scss: {
+            test: /\.scss$/,
+            use: ["style-loader",'css-loader', 'sass-loader' ]
+        },
+        
+        file: {
+            test: /\.(png)$/i,
+            loader: "file-loader",
+            options: {
+                name: "public/[hash].[ext]"
+            }
+        }
     }
 
     const resolve = {
         extensions: [".ts", ".tsx", ".js", ".jsx"],
-        alias: { // Тут тот же момент, что и в tsconfig.json, чтобы Webpack смог понять ссылки на директории
+        alias: { 
             App: path.resolve(__dirname, '../src/App/'),
             Pages: path.resolve(__dirname, '../src/Pages/'),
+            Components: path.resolve(__dirname, '../src/Components/'),
         },
     }
 

@@ -4,19 +4,19 @@ import "./SlideList.scss"
 interface CustomSlideProps {
     link: string;
     description: string;
-    img: string
+    img: string;
+    bName: string;
 }
+
 
 const CustomSlide = (props: CustomSlideProps) => {
     return(
-        <div className="CustomSlide_div">
-            <div className="CustomSlide_description">
-                <p>{props.description}</p>
-                <a href={props.link} target="_blank">Ссылка на проект</a>
+        <div className="customSlide_div flex">
+            <img className="customSlide_images" src={props.img} alt="Фото проекта" />
+            <div className="customSlide_description flex">
+                <p className="descriptions_portfolio">{props.description}</p>
+                <a className="a_link_linkButton color_white" href={props.link} target="_blank"><div className="div_linkButton flex">{props.bName}</div></a>
             </div>
-            <figure>
-                <img className="images" src={props.img} alt="Фото проекта" />
-            </figure>
         </div>
     )
 }

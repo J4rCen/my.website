@@ -7,8 +7,8 @@ const WelcomeScreen = (props: any) => {
     return(
         <div id="home" className="divImg">
             <figure className="welcomeScreenImage__figure">
-                <img src={props.isMobile ? imgbgm : imgbg } alt="" className="welcomeScreenImage__img"/>
-                <figcaption className="welcomeScreenImage__figcaption">
+                <img src={props.isMobile ? imgbgm : imgbg } alt="" className="welcomeScreenImage__img block"/>
+                <figcaption className="welcomeScreenImage__figcaption flex color_white">
                     <span className="myName_span">Davletov Danil</span>
                     <span className="myProfession-span">Front-end developer</span>
                 </figcaption>

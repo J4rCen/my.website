@@ -10,10 +10,10 @@ import project from "./project"
 
 const MyWorks = () => {
     return (
-        <div className="MyWorks_div">
+        <div className="MyWorks_div block">
             <TableContents link="portfolio" content="Portfolio"/>
-            <div className="MyWorks_div_slideList">
-                <SlideList project={project}/>
+            <div className="MyWorks_div_slideList block">
+                <SlideList data={project}/>
             </div>
         </div>
     )

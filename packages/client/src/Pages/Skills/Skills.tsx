@@ -6,14 +6,14 @@ import SkillsList from "../../Components/skillsList"
 
 const Skills = () => {
     return(
-        <div className="skillsList_div">
+        <div className="skillsList_div flex">
             <TableContents link="skills" content="skills"/>
-            <div className="skillsList">
+            <div className="skillsList flex">
                 <SkillsList title={"Верстка"} skils={["HTML", "Css", "Scss"]}/>
-                <SkillsList title={"Програмирование"} skils={["js", "ts", "react", "node"]}/>
-                <SkillsList title={"Сборщики"} skils={["vite", "webpack"]}/>
-                <SkillsList title={"Тестирования"} skils={["chai", "mocha"]}/>
-                <SkillsList title={"Другое"} skils={["github"]}/>
+                <SkillsList title={"Програмирование"} skils={["Js", "Ts", "React", "NodeJs"]}/>
+                <SkillsList title={"Сборщики"} skils={["Vite", "Webpack"]}/>
+                <SkillsList title={"Тестирования"} skils={["Chai", "Mocha"]}/>
+                <SkillsList title={"Другое"} skils={["Github"]}/>
             </div>
         </div>
     )

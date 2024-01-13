@@ -9,17 +9,19 @@ const settings = {
     dots: true,
     adaptiveHeight: true,
     className: "CustomSlide_div",
+    speed: 500,
+    
 }
 
 interface SlideListProps {
-    project: Array<any>
+    data: Array<any>
 }
 
 const SlideList = (props: SlideListProps) => {
 
     const CustomSlideList: any = []
 
-    props.project.forEach((el, index) => CustomSlideList.push(<CustomSlide key={index} link={el.link} description={el.description} img={el.img}/>))
+    props.data.forEach((el, index) => CustomSlideList.push(<CustomSlide key={index} link={el.link} description={el.description} img={el.img} bName={el.bName}/>))
 
     return (
         <Slider {...settings}>

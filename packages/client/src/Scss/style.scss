@@ -1,8 +1,5 @@
-@font-face {
-    font-family: MajorMonoDisplay;
-    src: url('../../public/fonts/MajorMonoDisplay-Regular.ttf');
-}
-
+@import "./font.scss";
 @import "./reset.scss";
 @import "./media.scss";
 @import "./colors.scss";
+@import "./displays.scss";
