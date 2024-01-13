@@ -1,4 +1,5 @@
 const path = require("path")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = (env) => {
 
@@ -15,7 +16,7 @@ module.exports = (env) => {
 
         scss: {
             test: /\.scss$/,
-            use: ["style-loader",'css-loader', 'sass-loader' ]
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
         },
         
         file: {

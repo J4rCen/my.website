@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const webpackConfig = require('./webpack.config')
 
 module.exports = (env, argv) => {
@@ -52,6 +53,7 @@ module.exports = (env, argv) => {
                 template: path.resolve(__dirname, '../index.html'), // Скармливаем наш HTML-темплейт
             }),
             new WebpackNotifierPlugin({ alwaysNotify: false }),
+            new MiniCssExtractPlugin()
         ],
         entry: {
             main: path.resolve(__dirname, '../index.tsx'), // Энтрипоинт-файл, с которого и начнется наша сборка
