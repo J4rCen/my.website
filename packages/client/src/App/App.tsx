@@ -1,6 +1,5 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./App.scss"
-
 import NavMenu from "../Components/NavMenu"
 import WelcomeScreen from "../Pages/WelcomeScreen"
 import AboutMe from "../Pages/AboutMe"
@@ -11,13 +10,20 @@ import ContactMe from "../Pages/ContactMe"
 
 
 const App = () => {
+    const [width, setWidth] = useState(false)
 
-    let isMobile = document.documentElement.clientWidth <= 480
+    useEffect(() => {
+        if(window.innerWidth <= 480) {
+            setWidth(true)
+        } else {
+            setWidth(false)
+        }
+    }, [])
 
     return(
         <main className="main_react_app">
-            <NavMenu isMobile={isMobile}/>
-            <WelcomeScreen isMobile={isMobile}/>
+            <NavMenu isMobile={width}/>
+            <WelcomeScreen isMobile={width}/>
             <AboutMe/>
             <Skills/>
             <Portfolio/>
