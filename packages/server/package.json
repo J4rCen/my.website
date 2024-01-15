@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node server.ts",
-    "build:server": "webpack --config webpack/webpack.config.server.js"
+    "start": "node ./dist/server.cjs",
+    "build": "webpack --config webpack/webpack.server.js --mode production"
   },
   "keywords": [],
   "author": "",
