@@ -3,24 +3,29 @@ import sendEmailTransport from "../../utils/sendEmailTransport"
 
 const SendEmail = () => {
 
-    const [name, setName] = useState<string>()
-    const [email, setEmail] = useState<string>()
-    const [message, setMessage] = useState<string>()
+    const [name, setName] = useState<string>('')
+    const [email, setEmail] = useState<string>('')
+    const [message, setMessage] = useState<string>('')
 
     const handleSubmit = (event: any) => {
         event.preventDefault();
-        
-        const mes = {
-            name: `Имя отправителя: ${name}`,
-            email: `Почта отправителя: ${email}`,
-            message: `Сообщение: ${message}`
-        }
 
-        sendEmailTransport(mes)
+        if(name !== '' && email !== '' && message !== '') {
+            const mes = {
+                name: `Имя отправителя: ${name}`,
+                email: `Почта отправителя: ${email}`,
+                message: `Сообщение: ${message}`
+            }
+    
+            sendEmailTransport(mes)
+            
+            setName('')
+            setEmail('')
+            setMessage('')
+        } else {
+            alert("Для отправки заполните поля")
+        }
         
-        setName('')
-        setEmail('')
-        setMessage('')
     }
 
     return (

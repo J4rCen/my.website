@@ -1,12 +1,14 @@
 import nodemailer from 'nodemailer';
+import * as process from 'process'
+require('dotenv').config()
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.mail.ru',
-    port: 465,
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
     secure: true,
     auth: {
-        user: 'myweb00@mail.ru',
-        pass: 'DS6endLbzybFUrxfxCe4'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWD
     }
 });
 
