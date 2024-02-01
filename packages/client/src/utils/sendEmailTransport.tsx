@@ -1,5 +1,4 @@
 async function sendMail(mes: any) {
-    console.log(mes)
     fetch('http://localhost:3001/sendmail', {
         method: "POST",
         body: JSON.stringify(mes),

@@ -1,4 +1,3 @@
-// import photoProcessor from "../../utils/photoProcessor"
 import React from "react"
 import html from "../../../public/Skills/html.png"
 import css from "../../../public/Skills/css.png"
@@ -7,13 +6,17 @@ import scss from "../../../public/Skills/scss.png"
 import js from "../../../public/Skills/js.png"
 import ts from "../../../public/Skills/ts.png"
 import react from "../../../public/Skills/react.png"
+
 import node from "../../../public/Skills/node.png"
+import nginx from "../../../public/Skills/nginx.png"
 
 import vite from "../../../public/Skills/vite.png"
 import webpack from "../../../public/Skills/webpack.png"
 
 import chai from "../../../public/Skills/chai.png"
 import mocha from "../../../public/Skills/mocha.png"
+
+import postgreSQL from "../../../public/Skills/postgresql.png"
 
 import github from "../../../public/Skills/github.png"
 
@@ -37,8 +40,10 @@ const skillsImage: any = {
     NodeJs: photoProcessor(node, size.h, size.w, "NodeJs"),
     Vite: photoProcessor(vite, size.h, size.w, "Vite"),
     Webpack: photoProcessor(webpack, size.h, size.w, "Webpack"),
+    nginx: photoProcessor(nginx, size.h, size.w, "nginx"),
     Chai: photoProcessor(chai, size.h, size.w, "Chai"),
     Mocha: photoProcessor(mocha, size.h, size.w, "Mocha"),
+    PostgreSQL: photoProcessor(postgreSQL, size.h, size.w, "PostgreSQL"),
     Github: photoProcessor(github, size.h, size.w, "Github"),
 }
 

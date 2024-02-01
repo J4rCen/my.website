@@ -37,7 +37,7 @@ const SendEmail = () => {
                 <button>Отправить</button>
             </span>
 
-            <textarea className="email_textarea" onChange={e => setMessage(e.target.value)} value={message} placeholder="Введите ваше сообщение"></textarea>       
+            <textarea className="email_textarea" onChange={e => setMessage(e.target.value)} value={message} placeholder="Введите сообщение"></textarea>       
         </form>
     )
 }

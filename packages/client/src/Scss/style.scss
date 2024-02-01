@@ -3,3 +3,7 @@
 @import "./media.scss";
 @import "./colors.scss";
 @import "./displays.scss";
+
+html {
+    scroll-behavior: smooth;
+}

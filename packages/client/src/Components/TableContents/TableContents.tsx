@@ -9,9 +9,13 @@ interface contentsProps {
 
 const TableOfContents = (props: contentsProps) => {
     return (
-        <div id={props.link} className="ontents_div">
-            <p className="ontents_p color_white">{props.content}</p>
-        </div>
+        <span>
+            <div id={props.link} className="indentation"></div>
+            <div className="ontents_div">
+                <p className="ontents_p color_white">{props.content}</p>
+            </div>
+        </span>
+        
     )
 }
 
