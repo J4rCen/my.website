@@ -1,0 +1,9 @@
+[build]
+    command = "npm run start"
+    publish = "dist"
+
+[[redirects]]
+    from = "/*"
+    to = "/server.cjs"
+    status = 200
+    force = true
