@@ -50,7 +50,7 @@ const projects: any[] = [
         link: "https://github.com/Sonyamaster1/Pixel-Bros/tree/develop",
         description: description.flappybird,
         img: flappybird,
-        bName: "Ссылка на проект"
+        bName: "Ссылка на GitHub"
     },
     {
         link: "https://petfoodstore-6259c.firebaseapp.com/",
@@ -62,7 +62,7 @@ const projects: any[] = [
         link: "https://github.com/J4rCen/ElectricTheGame",
         description: description.gameElectric,
         img: gameElectric,
-        bName: "Ссылка на проект"
+        bName: "Ссылка на GitHub"
     }
 ]
 

@@ -11,9 +11,9 @@ const AboutMe = () => {
             <TableContents link="aboutMe" content="About Me"/>
 
             <div className="AboutMe_inform grid">
-                <figure className="AboutMe_inform_figure">
+                {/* <figure className="AboutMe_inform_figure">
                     <img src="" alt="" />
-                </figure>
+                </figure> */}
 
                 <div className="AboutMe_inform_div">
                     <TxtAbout/>
