@@ -1,0 +1,22 @@
+.welcomeScreenImage__figure {
+    position: relative;
+    z-index: -1;
+}
+
+.welcomeScreenImage__img {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.welcomeScreenImage__figcaption {
+    font-family: MajorMonoDisplay;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+}
+

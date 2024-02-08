@@ -1,0 +1,9 @@
+@import "./font.scss";
+@import "./reset.scss";
+@import "./media.scss";
+@import "./colors.scss";
+@import "./displays.scss";
+
+html {
+    scroll-behavior: smooth;
+}

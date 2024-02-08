@@ -1,0 +1,30 @@
+.customSlide_div {
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.div_linkButton {
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 180px;
+    margin: 10px;
+    background-color: black;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.customSlide_description {
+    flex-direction: column;
+    align-items: center;
+}
+
+.a_link_linkButton {
+    text-decoration: none;
+}
+
+.descriptions_portfolio {
+    font-size: 18px;
+    white-space: pre-line;
+}

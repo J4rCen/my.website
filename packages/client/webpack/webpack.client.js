@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WebpackNotifierPlugin = require('webpack-notifier')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const webpackConfig = require('./webpack.config')
 
 module.exports = (env, argv) => {
@@ -35,14 +36,15 @@ module.exports = (env, argv) => {
               directory: path.join(__dirname, '../dist'),
             },
             compress: true,
-            port: 9000,
+            port: 3000,
             hot: true
-          },
+        },
         resolve: config.resolve,
         module: {
             rules: [
                 config.modules.js,
                 config.modules.scss,
+                config.modules.file,
             ],
         },
         plugins: [
@@ -51,6 +53,7 @@ module.exports = (env, argv) => {
                 template: path.resolve(__dirname, '../index.html'), // Скармливаем наш HTML-темплейт
             }),
             new WebpackNotifierPlugin({ alwaysNotify: false }),
+            new MiniCssExtractPlugin()
         ],
         entry: {
             main: path.resolve(__dirname, '../index.tsx'), // Энтрипоинт-файл, с которого и начнется наша сборка
@@ -58,6 +61,7 @@ module.exports = (env, argv) => {
         output: {
             filename: watchMode ? 'assets/[name].[hash].js' : 'assets/[name].[chunkhash].js', // небольшое условие, т.к. WDS не будет работать с chunkhash
             path: path.resolve(__dirname, '../dist'), // Весь наш результат складываем в папку dist
+            assetModuleFilename: 'public/[hash][ext]',
             publicPath: '/',
         },
         performance: {

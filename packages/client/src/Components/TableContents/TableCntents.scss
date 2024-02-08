@@ -1,0 +1,21 @@
+.ontents_div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 50px;
+}
+
+.indentation {
+    display: block;
+    position: static;
+    z-index: -10;
+    height: 23px;
+    margin-top: -23px;
+}
+
+.ontents_p {
+    font-size: 40px;
+    font-family: MajorMonoDisplay;
+}

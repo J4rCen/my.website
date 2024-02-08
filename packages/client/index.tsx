@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./src/App/App"
-import "./style.scss"
+import App from "./src/App"
+import "./src/Scss/style.scss"
 
-ReactDOM.createRoot(document.querySelector("#root") as HTMLElement).render(<App/>)
+ReactDOM.hydrateRoot(document.querySelector("#root") as HTMLElement, <App/>)

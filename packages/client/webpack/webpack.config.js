@@ -1,6 +1,8 @@
 const path = require("path")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = (env) => {
+
     const modules = {
         js: {
             test: /\.ts(x?)$/,
@@ -14,9 +16,16 @@ module.exports = (env) => {
 
         scss: {
             test: /\.scss$/,
-            use: ['style-loader', 'css-loader', 'sass-loader']
-        }
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
+        },
         
+        file: {
+            test: /\.(png)$/i,
+            loader: "file-loader",
+            options: {
+                name: "public/[hash].[ext]"
+            }
+        }
     }
 
     const resolve = {
@@ -24,6 +33,7 @@ module.exports = (env) => {
         alias: { 
             App: path.resolve(__dirname, '../src/App/'),
             Pages: path.resolve(__dirname, '../src/Pages/'),
+            Components: path.resolve(__dirname, '../src/Components/'),
         },
     }
 
