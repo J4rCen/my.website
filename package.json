@@ -10,7 +10,7 @@
     "client:watch": "lerna run watch --scope=client",
     "server:build": "lerna run build --scope=server",
     "server:start": "lerna run start --scope=server",
-    "build": " npm run i && lerna run build --scope=client && lerna run build --scope=server",
+    "build": " npm run install && lerna run build --scope=client && lerna run build --scope=server",
     "start": "lerna run start --scope=server"
   },
   "keywords": [],
