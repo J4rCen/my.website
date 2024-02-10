@@ -6,6 +6,7 @@ import ReactDOMServer from "react-dom/server"
 import App from "../client/src/App"
 import transporter from "./createTransport"
 import bodyParser from "body-parser"
+import cors from "cors"
 
 async function startServer() {
     const PORT = 3001;
@@ -13,6 +14,8 @@ async function startServer() {
 
     const clientPath = path.resolve(__dirname, "../packages/client")
     const distPath = path.resolve(clientPath, 'dist')
+
+    server.use(cors())
 
     server.use(bodyParser.json({ type: 'application/json' }))
     server.use(
