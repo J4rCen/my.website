@@ -11,7 +11,7 @@ async function startServer() {
     const PORT = 3001;
     const server = express()
 
-    const clientPath = path.resolve(__dirname, "../../client")
+    const clientPath = path.resolve(__dirname, "../packages/client")
     const distPath = path.resolve(clientPath, 'dist')
 
     server.use(bodyParser.json({ type: 'application/json' }))
