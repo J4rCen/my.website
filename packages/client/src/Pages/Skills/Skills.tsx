@@ -10,7 +10,7 @@ const Skills = () => {
             <TableContents link="skills" content="skills"/>
             <div className="skillsList flex">
                 <SkillsList title={"Верстка"} skils={["HTML", "Css", "Scss"]}/>
-                <SkillsList title={"Програмирование"} skils={["Js", "Ts", "React", ]}/>
+                <SkillsList title={"Программирование"} skils={["Js", "Ts", "React", ]}/>
                 <SkillsList title={"Сервер"} skils={["NodeJs", "nginx"]}/>
                 <SkillsList title={"Сборщики"} skils={["Vite", "Webpack"]}/>
                 <SkillsList title={"Тестирования"} skils={["Chai", "Mocha"]}/>
