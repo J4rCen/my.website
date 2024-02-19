@@ -43,6 +43,10 @@ async function startServer() {
         }
     })
 
+    server.use('*', (_, res) => {
+        res.end("There's nothing here")
+    })
+
     server.listen(PORT, () => {
         
         console.log(`Server listen port ${PORT}`)
