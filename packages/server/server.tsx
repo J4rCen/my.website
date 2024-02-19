@@ -24,7 +24,7 @@ async function startServer() {
         })
     )
 
-    server.post('/sendmail', async (req, res) => {
+    server.use('/sendmail', async (req, res) => {
         try {
 
             const {name, email, message} = await req.body
@@ -40,21 +40,6 @@ async function startServer() {
             return res.status(200).send({ status: 'ok' })
         } catch (error) {
             console.log(error)
-        }
-    })
-
-    server.use(express.static(path.resolve(distPath)))
-    server.use("*", async (_, res) => {
-        try {
-            let template = await fs.readFile(path.resolve(distPath, 'index.html'), 'utf-8')
-            let htmlApp = ReactDOMServer.renderToString(<App/>)
-            template = template.replace('<div id="root"></div>', `<div id="root">${htmlApp}</div>`)
-
-            res.status(200).contentType(" text/html ")
-            return res.send(template)
-
-        } catch (error) {
-            console.error(error)
         }
     })
 

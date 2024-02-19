@@ -1,5 +1,5 @@
 async function sendMail(mes: any) {
-    fetch('http://localhost:3001/sendmail', {
+    await fetch('http://localhost:3001/sendmail', {
         method: "POST",
         body: JSON.stringify(mes),
         headers: {

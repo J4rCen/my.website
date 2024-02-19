@@ -33,7 +33,7 @@ module.exports = (env, argv) => {
         },
         output: {
             filename: 'server.cjs',
-            path: path.resolve(__dirname, "../../../dist"), // Все компилируем в папку server
+            path: path.resolve(__dirname, "../dist"), // Все компилируем в папку server
         },
         performance: {
             hints: false,
