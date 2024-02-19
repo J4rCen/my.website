@@ -1,5 +1,5 @@
 async function sendMail(mes: any) {
-    await fetch('https://my-web-ksus.onrender.com/sendmail', {
+    await fetch('https://sendmail-pmar.onrender.com/sendmail', {
         method: "POST",
         body: JSON.stringify(mes),
         headers: {
