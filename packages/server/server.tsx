@@ -24,7 +24,7 @@ async function startServer() {
         })
     )
 
-    server.use('/sendmail', async (req, res) => {
+    server.post('/sendmail', async (req, res) => {
         try {
 
             const {name, email, message} = await req.body
@@ -40,6 +40,14 @@ async function startServer() {
             return res.status(200).send({ status: 'ok' })
         } catch (error) {
             console.log(error)
+        }
+    })
+
+    server.get("/ping", async (_, res) => {
+        try {
+            return res.status(200).send({status: 'pong'})
+        } catch (error) {
+            console.error(error)
         }
     })
 
