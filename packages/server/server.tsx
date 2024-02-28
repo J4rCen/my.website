@@ -24,7 +24,7 @@ async function startServer() {
         })
     )
 
-    server.post('/sendmail', async (req, res) => {
+    server.use('/sendmail', async (req, res) => {
         try {
 
             const {name, email, message} = await req.body
