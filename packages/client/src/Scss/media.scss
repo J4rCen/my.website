@@ -24,11 +24,6 @@
         grid-template-rows: auto 1fr;
     }
 
-    .AboutMe_inform_figure {
-        height: 400px;
-        width: 80%;
-    }
-
     .type_contacts {
         grid-template-columns: 80%;
         grid-template-rows: auto 10px 100px;
@@ -88,7 +83,9 @@
     }
 
     .AboutMe_inform {
-        grid-template-columns:  1fr;
+        grid-template-columns: auto 1fr;
+        margin: 10px 10%;
+        gap: 50px;
     }
 
     .AboutMe_inform_figure {

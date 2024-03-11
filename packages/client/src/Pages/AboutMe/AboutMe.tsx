@@ -1,4 +1,5 @@
 import React from "react"
+import image from "../../../public/AboutMe/me.png"
 
 import "./AboutMe.scss"
 
@@ -11,10 +12,7 @@ const AboutMe = () => {
             <TableContents link="aboutMe" content="About Me"/>
 
             <div className="AboutMe_inform grid">
-                {/* <figure className="AboutMe_inform_figure">
-                    <img src="" alt="" />
-                </figure> */}
-
+                <img className="AboutMe_inform_img" src={image} alt="" />
                 <div className="AboutMe_inform_div">
                     <TxtAbout/>
                 </div>
